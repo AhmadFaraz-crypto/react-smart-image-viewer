@@ -1,0 +1,31 @@
+# Source files
+src/
+tests/
+
+# Config files
+*.config.ts
+*.config.js
+tsconfig.json
+.eslintrc*
+.prettierrc*
+
+# Development files
+.git/
+.github/
+.vscode/
+.idea/
+node_modules/
+
+# Test files
+coverage/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Misc
+*.log
+.DS_Store
+*.md
+!README.md
+

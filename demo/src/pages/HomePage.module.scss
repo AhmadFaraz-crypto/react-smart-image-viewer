@@ -1,0 +1,200 @@
+.homePage {
+  padding-top: 72px;
+}
+
+// Quick Start Section
+.quickStart {
+  background: linear-gradient(180deg, transparent 0%, rgba($color-primary, 0.03) 100%);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-8;
+  max-width: 800px;
+}
+
+.step {
+  display: flex;
+  gap: $spacing-6;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    gap: $spacing-4;
+  }
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: $gradient-primary;
+  border-radius: $radius-full;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: white;
+}
+
+.stepContent {
+  flex: 1;
+  min-width: 0;
+
+  h3 {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-3;
+  }
+
+  p {
+    color: $color-text-secondary;
+  }
+}
+
+// Features Section
+.features {
+  background: $color-bg-card;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-6;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featureCard {
+  padding: $spacing-6;
+  background: $color-bg-elevated;
+  border: 1px solid $color-border;
+  border-radius: $radius-xl;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: rgba($color-primary, 0.3);
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+
+  h3 {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-2;
+  }
+
+  p {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+.featureIcon {
+  font-size: $font-size-3xl;
+  margin-bottom: $spacing-4;
+}
+
+// Examples Section
+.exampleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-8;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.example {
+  h3 {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-2;
+  }
+
+  p {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    margin-bottom: $spacing-4;
+  }
+}
+
+// CTA Section
+.cta {
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: $spacing-12;
+  background: $gradient-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-2xl;
+
+  h2 {
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-4;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-8;
+  }
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-4;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+  }
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-4 $spacing-8;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  border-radius: $radius-lg;
+  transition: all $transition-base;
+}
+
+.ctaPrimary {
+  background: $gradient-primary;
+  color: white;
+  box-shadow: $shadow-md;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg, 0 0 20px rgba($color-primary, 0.3);
+    color: white;
+  }
+}
+
+.ctaSecondary {
+  background: $color-bg-elevated;
+  border: 1px solid $color-border;
+  color: $color-text-primary;
+
+  &:hover {
+    background: $color-bg-surface;
+    border-color: $color-border-light;
+  }
+}
+

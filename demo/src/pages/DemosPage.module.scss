@@ -1,0 +1,190 @@
+.demosPage {
+  padding-top: 120px;
+  padding-bottom: $spacing-20;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-12;
+
+  h1 {
+    font-size: $font-size-4xl;
+    margin-bottom: $spacing-4;
+
+    span {
+      background: $gradient-primary;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  p {
+    font-size: $font-size-lg;
+    color: $color-text-secondary;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.demos {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-8;
+}
+
+// Demo content styles
+.demoContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-4;
+  width: 100%;
+}
+
+.imageButton {
+  position: relative;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.02);
+
+    .imageOverlay {
+      opacity: 1;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 300px;
+    height: auto;
+    border-radius: $radius-lg;
+  }
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($color-bg-dark, 0.6);
+  color: white;
+  font-weight: $font-weight-medium;
+  opacity: 0;
+  transition: opacity $transition-fast;
+}
+
+.gallery {
+  display: flex;
+  gap: $spacing-3;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galleryItem {
+  padding: 0;
+  border: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  border-radius: $radius-md;
+  overflow: hidden;
+  transition: all $transition-fast;
+
+  &:hover {
+    border-color: $color-primary;
+    transform: scale(1.05);
+  }
+
+  img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+    @media (max-width: $breakpoint-md) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.openButton {
+  padding: $spacing-4 $spacing-8;
+  background: $gradient-primary;
+  color: white;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  border: none;
+  border-radius: $radius-lg;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg, 0 0 20px rgba($color-primary, 0.3);
+  }
+}
+
+// Hook demo specific styles
+.hookControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-4;
+  width: 100%;
+}
+
+.hookButtons {
+  display: flex;
+  gap: $spacing-3;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  button {
+    padding: $spacing-2 $spacing-4;
+    background: $color-bg-surface;
+    color: $color-text-primary;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    cursor: pointer;
+    transition: all $transition-fast;
+
+    &:hover {
+      background: $color-bg-elevated;
+      border-color: $color-primary;
+    }
+  }
+}
+
+.hookStatus {
+  font-family: $font-family-mono;
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+  padding: $spacing-2 $spacing-4;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  margin: 0;
+}
+
+// Zoom demo styles
+.zoomInfo,
+.disabledInfo {
+  text-align: center;
+
+  p {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    margin-bottom: $spacing-4;
+  }
+}
+

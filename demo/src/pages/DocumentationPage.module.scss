@@ -1,0 +1,240 @@
+.docsPage {
+  padding-top: 72px;
+  min-height: 100vh;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  gap: $spacing-8;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  position: sticky;
+  top: 96px;
+  height: fit-content;
+  padding: $spacing-8 0;
+  border-right: 1px solid $color-border;
+
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
+
+  nav {
+    padding-right: $spacing-6;
+  }
+
+  h4 {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: $spacing-3;
+    margin-top: $spacing-6;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: $spacing-4;
+  }
+
+  a {
+    display: block;
+    padding: $spacing-2 $spacing-3;
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    border-radius: $radius-md;
+    transition: all $transition-fast;
+
+    &:hover {
+      color: $color-text-primary;
+      background: rgba($color-primary, 0.1);
+    }
+  }
+}
+
+.content {
+  padding: $spacing-8 $spacing-6;
+  max-width: 900px;
+
+  @media (max-width: $breakpoint-lg) {
+    padding: $spacing-8 $container-padding;
+    max-width: none;
+  }
+}
+
+.header {
+  margin-bottom: $spacing-12;
+  padding-bottom: $spacing-8;
+  border-bottom: 1px solid $color-border;
+
+  h1 {
+    font-size: $font-size-4xl;
+    margin-bottom: $spacing-4;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    color: $color-text-secondary;
+    margin: 0;
+  }
+}
+
+.section {
+  margin-bottom: $spacing-16;
+  scroll-margin-top: 100px;
+
+  h2 {
+    font-size: $font-size-2xl;
+    margin-bottom: $spacing-4;
+    padding-bottom: $spacing-3;
+    border-bottom: 1px solid $color-border;
+  }
+
+  h3 {
+    font-size: $font-size-lg;
+    margin-top: $spacing-8;
+    margin-bottom: $spacing-4;
+  }
+
+  > p {
+    margin-bottom: $spacing-4;
+    line-height: 1.7;
+  }
+
+  code {
+    font-family: $font-family-mono;
+    font-size: 0.9em;
+    padding: $spacing-1 $spacing-2;
+    background: $color-bg-elevated;
+    border-radius: $radius-sm;
+    color: $color-primary-light;
+  }
+}
+
+.note {
+  padding: $spacing-4;
+  background: rgba($color-accent-amber, 0.1);
+  border: 1px solid rgba($color-accent-amber, 0.3);
+  border-radius: $radius-lg;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  margin-top: $spacing-4;
+
+  strong {
+    color: $color-accent-amber;
+  }
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: $spacing-4 0;
+
+  li {
+    position: relative;
+    padding: $spacing-3 0 $spacing-3 $spacing-6;
+    border-bottom: 1px solid $color-border;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $color-accent;
+      font-weight: bold;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    strong {
+      color: $color-text-primary;
+    }
+  }
+}
+
+.keyboardTable {
+  overflow-x: auto;
+  margin: $spacing-4 0;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: $color-bg-card;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    overflow: hidden;
+
+    th,
+    td {
+      padding: $spacing-4;
+      text-align: left;
+      border-bottom: 1px solid $color-border;
+    }
+
+    th {
+      background: $color-bg-elevated;
+      font-weight: $font-weight-semibold;
+      color: $color-text-primary;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    kbd {
+      display: inline-block;
+      padding: $spacing-1 $spacing-3;
+      font-family: $font-family-mono;
+      font-size: $font-size-sm;
+      background: $color-bg-elevated;
+      border: 1px solid $color-border;
+      border-radius: $radius-md;
+      box-shadow: 0 2px 0 $color-border;
+    }
+  }
+}
+
+.browserList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-3;
+  margin: $spacing-4 0;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: $spacing-3;
+    padding: $spacing-3 $spacing-4;
+    background: $color-bg-card;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+
+    &::before {
+      content: '✓';
+      color: $color-accent;
+      font-weight: bold;
+    }
+  }
+}
+

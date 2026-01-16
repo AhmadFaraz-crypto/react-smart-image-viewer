@@ -1,0 +1,98 @@
+.wrapper {
+  margin: $spacing-6 0;
+}
+
+.title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-4;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background: $color-bg-card;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: $font-size-sm;
+
+  th,
+  td {
+    padding: $spacing-4;
+    text-align: left;
+    border-bottom: 1px solid $color-border;
+  }
+
+  th {
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    background: $color-bg-elevated;
+    white-space: nowrap;
+
+    &:first-child {
+      border-top-left-radius: $radius-lg;
+    }
+
+    &:last-child {
+      border-top-right-radius: $radius-lg;
+    }
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tr:hover td {
+    background: rgba($color-primary, 0.02);
+  }
+}
+
+.propName {
+  color: $color-primary-light;
+  font-family: $font-family-mono;
+  font-size: $font-size-sm;
+  background: rgba($color-primary, 0.1);
+  padding: $spacing-1 $spacing-2;
+  border-radius: $radius-sm;
+  white-space: nowrap;
+}
+
+.required {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.propType {
+  color: $color-accent;
+  font-family: $font-family-mono;
+  font-size: $font-size-xs;
+  background: rgba($color-accent, 0.1);
+  padding: $spacing-1 $spacing-2;
+  border-radius: $radius-sm;
+  white-space: nowrap;
+}
+
+.propDefault {
+  color: $color-accent-amber;
+  font-family: $font-family-mono;
+  font-size: $font-size-xs;
+  background: rgba($color-accent-amber, 0.1);
+  padding: $spacing-1 $spacing-2;
+  border-radius: $radius-sm;
+  white-space: nowrap;
+}
+
+.noDefault {
+  color: $color-text-muted;
+}
+
+.propDescription {
+  color: $color-text-secondary;
+  line-height: 1.5;
+  min-width: 200px;
+}
+
